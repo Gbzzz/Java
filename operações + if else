@@ -1,0 +1,33 @@
+package teste_1;
+
+public class operações {
+
+	public static void main(String[] args) {
+		int x = 51;
+		int y = 100;
+		int w;
+		int z;
+		
+		w = x + y;
+		x = y - x;
+		y = x * y;
+		z = y / x;
+		
+		System.out.println("O valor da soma é = " + w);
+		
+		System.out.println("O valor da subtração é = " + x);
+		
+		System.out.println("O valor da multiplicação é = " + y);
+		
+		System.out.println("O valor da divisão é = " + z);
+		
+		if((x % 2) == 0) {
+			System.out.println("\nEsse número é par");
+		}
+		else {
+			System.out.println("\nÉ ímpar");
+		}
+		
+	}
+
+}
