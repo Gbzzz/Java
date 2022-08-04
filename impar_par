@@ -1,0 +1,20 @@
+package teste_1;
+
+import java.util.Scanner;
+
+public class impar_par {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Digita teu número: ");
+		int num = entrada.nextInt();
+		
+		if ((num % 2) == 0) {
+			System.out.println("\nSeu número é par");
+		}
+		else {
+			System.out.println("\nSeu número é ímpar");
+		}
+	}
+
+}
