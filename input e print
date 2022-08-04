@@ -1,0 +1,15 @@
+package teste_num_1;
+
+import java.util.Scanner;
+
+public class teste_java {
+
+	public static void main(String[] args) {
+		Scanner meuobj = new Scanner(System.in);
+		System.out.println("Digita teu nome ai nego drama: ");
+		
+		String nome = meuobj.nextLine();
+		System.out.println("Salve " + nome);
+	}
+
+}
