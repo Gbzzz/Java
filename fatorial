@@ -1,0 +1,30 @@
+package teste01;
+
+import java.util.ArrayList;
+
+import java.util.Scanner;
+
+public class fatorial {
+
+	public static void main(String[] args) {
+		int calculo = 1;
+		int calFat = 0;
+		
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Digita teu fatorial ai: ");
+		int fatorial = entrada.nextInt();
+		ArrayList<Integer> lista = new ArrayList<Integer>();
+		
+		for (int i = 1; i <= fatorial; i++) {
+			lista.add(i);
+		}
+		
+		for (Integer i : lista) {
+			calFat = i * calculo;
+			calculo = calFat;
+		}
+		
+		System.out.println(calFat);
+	}
+
+}
