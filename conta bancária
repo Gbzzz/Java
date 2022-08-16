@@ -1,0 +1,58 @@
+package teste1;
+
+import java.util.Scanner;
+
+public class ContaBancária {
+
+	public static void main(String[] args) {
+		
+		float saldo = 0;
+		int opcao = 0;
+		float valDeposito;
+		
+		while (true) {
+			System.out.println("Conta Bancaria");
+			System.out.println("1 - Saldo");
+			System.out.println("2 - Depositar");
+			System.out.println("3 - Sacar");
+			System.out.println("4 - Sair");
+			System.out.println("---------");
+			
+			Scanner entrada = new Scanner(System.in);
+			opcao =  entrada.nextInt();
+			
+			if (opcao == 1) {
+				System.out.println("Saldo = " + saldo + "\n");
+			}
+			
+			else if (opcao == 2) {
+				System.out.println("Qual o valor que vc deseja depositar: ");
+				valDeposito = entrada.nextFloat();
+				if (valDeposito <= 0) {
+					System.out.println("Não é possível depositar esse valor.");
+				}
+				else {
+					saldo += valDeposito;
+					System.out.println("\nValor depositado com sucesso!");
+					System.out.println("Seu novo saldo = " + saldo + "\n");
+				}
+			break;
+			}
+			else if(opcao == 3) {
+				if (saldo <= 0) {
+					
+				}
+				else{
+				System.out.println("Qual valor deseja sacar?");}
+			}
+			
+			else if (opcao == 4) {
+				System.out.println("Finalizando...");
+				break;
+			}
+			
+		}
+
+	}
+
+}
