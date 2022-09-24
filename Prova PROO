@@ -1,4 +1,76 @@
-package projetos;
+/*QUESTÃO 01 (06 pontos)
+	Jokenpo é uma brincadeira japonesa, onde dois jogadores/as escolhem um dentre três
+	possíveis itens: Pedra, Papel ou Tesoura.
+	O objetivo é fazer com que o programa, que dada a jogada dos dois jogadores/as, informa o
+	resultado da partida.
+	O vencedor final é o que jogador(a) que obter mais vitórias de 3 rodadas (utilizar loop).
+	As regras são as seguintes:
+	● Pedra empata com Pedra
+	● Pedra ganha de Tesoura
+	● Tesoura empata com Tesoura
+	● Tesoura ganha de Papel
+	● Papel empata com Papel
+	● Papel ganha de Pedra
+
+	O programa deve exibir:
+	● Qual o nome do/a jogador/a que venceu cada partida.
+	● Qual o nome do/a vencedor/a final do jogo (venceu mais partidas).
+	● Placar final do jogo com os nomes dos/as jogadores/as.
+
+	Para isso o programa deve possuir
+	● Dois construtores.
+	○ Um que recebe os nomes dos/as jogadores/as, e atribui os valores dos
+	argumentos aos dois atributos da classe (jogador1, jogador2).
+	○ Um que não recebe nenhum parâmetro, fazendo com que os atributos fiquem
+	vazios.
+	○ Ambos os construtores deverão chamar o método telaDeBoasVindas.
+	● Método telaDeBoasVindas.
+	○ Deve verificar se os atributos jogador1 e jogador2 estão vazios. Se qualquer um
+	estiver vazio, deverá solicitar o nome do/a jogador/a que estiver vazio.
+	○ Apresentar a seguinte mensagem:
+	**** Bem vindos <nome jogador1> e <nome jogador2> ao jogo de Jokenpo ***
+	○ Chamar o método escolheQuantidadePartidas
+	● Método de escolheQuantidadePartidas
+	○ Este método deve apresentar as quantidades de partidas disponíveis, e esperar
+	que o usuário escolha apenas uma opção (utilizar o comando SWITCH), e
+
+	PROGRAMAÇÃO ORIENTADA A OBJETOS - AV1
+	Professor: Fernando Kenji Kamei Turma: 4o período Ano: 2022.1
+	conforme a opção escolhida, atribuir a um atributo da classe chamado
+	qtdPartidas o valor correspondente.
+
+	● A quantidade de partidas deve ser definida a partir da escolha do usuário:
+	○ 5 partidas
+	○ 7 partidas
+	○ 9 partidas
+	● Método jogar
+	○ Esse método deverá ser repetido através do comando Enquanto (WHILE), até
+	que a quantidade de partidas se encerre, ou até que o um jogador possua
+	vitórias suficientes para ganhar a partida mesmo que o outro venha a ganhar
+	todas as demais partidas restantes.
+	○ Apresenta em qual número da partida estão, e.g, Partida de no. <x> de <y>
+	Onde x deve ser o número da partida atualE y deve ser a quantidade total de
+	partidas
+	○ Solicita a escolha de item (pedra, papel ou tesoura) de cada jogador.
+	○ Chama o método validarJogada que recebe como parâmetro a jogada dos dois
+	jogadores, e retorna um inteiro. Um (1) se o jogador 1 vencer, dois (2) se o
+	jogador 2 vencer, e três (3) se der empate.
+
+	● Método validarJogada
+	○ Esse método deve retornar um inteiro, e recebe como parâmetro a jogada dos
+	dois jogadores.
+	○ Validar a jogada de acordo com as regras do jogo.
+	○ Se o jogador 1 vencer, retorna 1; se o jogador 2 vencer, retorna 2; se der
+	empate, retorna 3.
+	● Método placarFinal
+	○ Esse método deve apresentar quem foi o ganhador final do jogo, ou se deu
+	empate.
+	○ Apresentar a quantidade de vitórias de cada jogador.
+	○ Apresentar a quantidade de empates.
+	● Método main
+	○ Deverá chamar um dos construtores
+	○ Deve chamar o método jogar
+	○ Deve chamar o método placarFinal*/
 
 import java.util.Scanner;
 
