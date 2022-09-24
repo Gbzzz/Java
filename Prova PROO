@@ -1,0 +1,154 @@
+package projetos;
+
+import java.util.Scanner;
+
+public class pedraPapelTesoura {
+
+private String jogador1;
+private String jogador2;
+private int qtdPartidas = 0;
+private int vitoriaJog1 = 0;
+private int vitoriaJog2 = 0;
+private int empate = 0;
+Scanner entrada = new Scanner(System.in);
+
+pedraPapelTesoura(String nome1, String nome2)
+{
+	this.jogador1 = nome1;
+	this.jogador2 = nome2;
+	telaDeBoasVindas();
+}
+
+	pedraPapelTesoura()
+{
+	telaDeBoasVindas();
+}
+	
+void escolheQuantidadePartidas() 
+{
+	System.out.println("Opções: ");
+	System.out.println("1 - 5 jogadas");
+	System.out.println("2 - 7 jogadas");
+	System.out.println("3 - 9 jogadas");
+	int opcao = entrada.nextInt();
+	
+	switch (opcao) 
+	{
+	case 1:
+		this.qtdPartidas += 5;
+		jogar();
+		break;
+	case 2: 
+		this.qtdPartidas += 7;
+		jogar();
+		break;
+	case 3:
+		this.qtdPartidas += 9;
+		jogar();
+		break;
+	}
+	
+}
+
+
+void placarFinal() 
+{
+	if (this.vitoriaJog1 > this.vitoriaJog2) 
+	{
+		System.out.println("O vencedor FINAL foi o jogador 1");
+	}
+	else if(this.vitoriaJog1 < this.vitoriaJog2) 
+	{
+		System.out.println("O vencedor FINAL foi o jogador 2");
+	}
+	else 
+	{
+		System.out.println("O resultado FINAL deu empate");
+	}
+}
+
+void validarJogada(int jogadaJogador1, int jogadaJogador2)
+{
+	if(jogadaJogador1 == jogadaJogador2) 
+	{
+		System.out.println("Essa rodada deu empate");
+		this.empate += 1;
+	}
+	else if(jogadaJogador1 == 1 & jogadaJogador2 == 2) 
+	{
+		System.out.println("Vencedor da rodada foi o jogador 2");
+		this.vitoriaJog2 += 1;
+	}
+	else if(jogadaJogador1 == 1 & jogadaJogador2 == 3) 
+	{
+		System.out.println("Vencedor da rodada foi o jogador 1");
+		this.vitoriaJog1 += 1;
+	}
+	else if(jogadaJogador1 == 2 & jogadaJogador2 == 1) 
+	{
+		System.out.println("Vencedor da rodada foi o jogador 1");
+		this.vitoriaJog1 += 1;
+	}
+	else if(jogadaJogador1 == 2 & jogadaJogador2 == 3) 
+	{
+		System.out.println("Vencedor da rodada foi o jogador 2");
+		this.vitoriaJog2 += 1;
+	}
+	else if(jogadaJogador1 == 3 & jogadaJogador2 == 1) 
+	{
+		System.out.println("Vencedor da rodada foi o jogador 1");
+		this.vitoriaJog1 += 1;
+	}
+	placarFinal();
+}
+
+void jogar() 
+{
+	int i = 0;
+	while (i < this.qtdPartidas) 
+	{
+		if (this.vitoriaJog1 > this.qtdPartidas / 2 || this.vitoriaJog2 > this.qtdPartidas / 2) 
+		{
+			placarFinal();
+			break;
+		}
+		i++;
+		System.out.println("Partida de número " + i + " de " + this.qtdPartidas);
+		System.out.println("1 - PEDRA");
+		System.out.println("2 - PAPEL");
+		System.out.println("3 - TESOURA");
+		System.out.println("Jogada jogador 1>> ");
+		int jogadaJog1 = entrada.nextInt();
+		System.out.println("1 - PEDRA");
+		System.out.println("2 - PAPEL");
+		System.out.println("3 - TESOURA");
+		System.out.println("Jogada jogador 2>> ");
+		int jogadaJog2 = entrada.nextInt();
+		validarJogada(jogadaJog1, jogadaJog2);
+	}
+}
+
+	void telaDeBoasVindas()
+{
+		if(this.jogador1 == null)
+{
+			System.out.println("Nome do jogador 1: ");
+			this.jogador1 = entrada.nextLine();
+
+		}
+		if(this.jogador2 == null)
+		{
+			System.out.println("Nome do jogador 2: ");
+			this.jogador2 = entrada.nextLine();
+		}
+		System.out.println("Bem vindo " + this.jogador1 + " e " + this.jogador2 + " ao jogo de jokenpo");
+		escolheQuantidadePartidas();
+
+		}
+	
+	public static void main(String[] args) {
+		pedraPapelTesoura teste123 = new pedraPapelTesoura();
+
+	}
+	
+}
